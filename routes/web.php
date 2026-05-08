@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\EventController as EventAdminController;
 
 Route::get('/', function () {
     return '<h1>Ini adalah Halaman Tentang Aplikasi Event Hub</h1>';
@@ -21,3 +22,8 @@ Route::get('/katalog', function (){
 Route::get('/bantuan', function (){
     return view('bantuan');
 });
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('events', EventAdminController::class);
+});
+

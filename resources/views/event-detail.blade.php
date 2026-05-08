@@ -1,7 +1,7 @@
-@extands('layouts.app')
+@extends('layouts.app')
 
 <div class="lg:col-span-2 space-y-12">
-            <div class="space-y-4">
+            <d  iv class="space-y-4">
                 <span
                     class="px-4 py-1.5 bg-indigo-100 text-indigo-700 rounded-full text-sm font-bold uppercase tracking-wider">Music
                     Festival</span>
