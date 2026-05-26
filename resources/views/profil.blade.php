@@ -52,8 +52,8 @@
         </h1>
 
         <div class="space-y-2 text-gray-700">
-            <p><span class="font-medium">Nama :</span> Nailah Putri Alidya</p>
-            <p><span class="font-medium">Email :</span> Nailah@example.com</p>
+            <p><span class="font-medium">Nama :</span> Dian Indah Safitri</p>
+            <p><span class="font-medium">Email :</span> Dian@example.com</p>
         </div>
 
         <div class="mt-4 text-gray-600 text-sm">
