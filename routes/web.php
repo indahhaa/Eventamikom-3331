@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EventController as EventAdminController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\Admin\AuthController;
 
 Route::get('/', [HomeController::class, 'index']);
 
