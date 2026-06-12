@@ -21,9 +21,22 @@ Route::get('/ticket', function () {
     return view('ticket');
 });
 
+Route::get('/login', function () {
+    return redirect()->route('admin.login');
+})->name('login');
+
 Route::prefix('admin')->name('admin.')->group(function () {
-    Route::get('/', [DashboardController::class, 'index'])->name('index');
+    // Rute Login bebas akses
+    Route::get('login', [AuthController::class, 'showLogin'])->name('login');
+    Route::post('login', [AuthController::class, 'login'])->name('login.post');
+    Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('events', EventAdminController::class);
+    Route::get('transactions', [TransactionController::class, 'index'])->name('transactions.index');
     Route::resource('categories', CategoryController::class);
     Route::resource('partners', PartnerController::class);
+
+});
 });
